@@ -31,6 +31,7 @@ app.post("/uploadmodel", upload.single("modelFile") ,(req,res)=>{
       })
    }
 })
+app.get("/" , (req, res)=>res.send("hello workd"))
 app.post("/savemodeldata", async (req,res)=>{
    const data  =  new dataModel({...req.body})
    await  data.save()
